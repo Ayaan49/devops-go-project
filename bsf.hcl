@@ -13,8 +13,8 @@ gomodule {
 }
 
 oci "dev" {
-  name         = "ttl.sh/godev/go:dev"
-  cmd          = ["/bin/go-server-example"]
+  name         = "ttl.sh/gonew/go:demo"
+  cmd          = ["devops-go-project.git"]
   envVars = ["foo=bar"]
   exposedPorts = ["8080/tcp"]
 }

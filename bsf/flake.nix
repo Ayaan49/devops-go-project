@@ -130,10 +130,10 @@
 ociImage_dev = forEachSupportedSystem ({ pkgs, nix2containerPkgs, system ,  nixpkgs-1ebb7d7bba2953a4223956cfb5f068b0095f84a7-pkgs,  nixpkgs-ac5c1886fd9fe49748d7ab80accc4c847481df14-pkgs,  nixpkgs-7445ccd775d8b892fc56448d17345443a05f7fb4-pkgs,  nixpkgs-d7570b04936e9b0f5268e0d834dee40368ad3308-pkgs,  ... }: {
   
   ociImage_dev_app = nix2containerPkgs.nix2container.buildImage {
-    name = "ttl.sh/godev/go:dev";
+    name = "ttl.sh/gonew/go:demo";
     copyToRoot = [ inputs.self.packages.${system}.default ];
     config = {
-      cmd = [  "/bin/go-server-example"  ];
+      cmd = [  "devops-go-project.git"  ];
       entrypoint = [  ];
       env = [
          "foo=bar"

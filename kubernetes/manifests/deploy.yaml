@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-web-server
+  labels:
+    app: go-web-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-web-server
+  template:
+    metadata:
+      labels:
+        app: go-web-server
+    spec:
+      containers:
+      - name: go-web-server
+        image: ttl.sh/gonew/go:demo
+        ports:
+        - containerPort: 8080
+
